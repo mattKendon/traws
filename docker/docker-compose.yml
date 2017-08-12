@@ -1,0 +1,133 @@
+version: "2"
+
+services:
+
+  database:
+    image: mariadb
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=wordpress
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+    networks:
+      - application
+    restart: always
+
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+      - PMA_HOSTS=database
+      - VIRTUAL_HOST=db.traws.local
+    networks:
+      - proxy-tier
+      - application
+    restart: always
+
+  maildev:
+    image: djfarrelly/maildev:1.0.0-rc2
+    command: bin/maildev --web 80 --smtp 25 --hide-extensions STARTTLS
+    environment:
+      - VIRTUAL_HOST=mail.traws.local
+      - LETSENCRYPT_HOST=mail.traws.local
+      - LETSENCRYPT_EMAIL=admin@traws.local
+    networks:
+      - proxy-tier
+      - application
+    restart: always
+
+  web:
+    build: php
+    depends_on:
+      - database
+      - maildev
+    image: traws_php
+    volumes:
+      - ../:/app
+    working_dir: /app/web
+    expose:
+      - 80
+    env_file:
+      - php/application.env
+    environment:
+      - VIRTUAL_HOST=traws.local
+      - LETSENCRYPT_HOST=traws.local
+      - LETSENCRYPT_EMAIL=admin@traws.local
+    command: ["php", "-S", "0.0.0.0:80", "-t", "/app/web", "server.php"]
+    networks:
+      - proxy-tier
+      - application
+    restart: always
+
+  php:
+    depends_on:
+      - database
+      - maildev
+    build: ./php
+    image: traws_php
+    working_dir: /app
+    env_file:
+      - php/application.env
+    volumes:
+      - ../:/app
+    command: ["php", "--version"]
+    networks:
+      - application
+
+  wpcli:
+    depends_on:
+      - database
+      - maildev
+    build: ./wpcli
+    image: traws_wpcli
+    env_file:
+      - php/application.env
+    working_dir: /app
+    volumes:
+      - ../:/app
+    command: ["wp"]
+    networks:
+      - application
+
+  xdebug:
+    depends_on:
+      - database
+      - maildev
+    build: ./xdebug
+    image: traws_xdebug
+    env_file:
+      - php/application.env
+    working_dir: /app
+    volumes:
+      - ../:/app
+    environment:
+      - XDEBUG_CONFIG="idekey=PHPSTORM"
+    command: ["php", "--version"]
+    networks:
+      - application
+
+  composer:
+    depends_on:
+      - database
+      - maildev
+    build: ./composer
+    image: traws_composer
+    env_file:
+      - php/application.env
+    volumes:
+      - ../:/app
+    command: ["install"]
+    networks:
+      - application
+
+networks:
+  application:
+  proxy-tier:
+    external:
+      name: reverse-proxy
