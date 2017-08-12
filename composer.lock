@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4285ceab3a3933f5713e8abee4072b6e",
+    "content-hash": "2a7dfba0141e071c6fd61b4e5c52b274",
     "packages": [
         {
             "name": "composer/installers",
@@ -388,6 +388,26 @@
             "time": "2016-09-01T10:05:43+00:00"
         },
         {
+            "name": "wpackagist-plugin/custom-facebook-feed",
+            "version": "2.4.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/custom-facebook-feed/",
+                "reference": "tags/2.4.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-facebook-feed.2.4.6.zip",
+                "reference": "tags/2.4.6",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-facebook-feed/"
+        },
+        {
             "name": "wpackagist-plugin/polylang",
             "version": "2.1.6",
             "source": {
@@ -398,7 +418,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/polylang.2.1.6.zip",
-                "reference": null,
+                "reference": "tags/2.1.6",
                 "shasum": null
             },
             "require": {
@@ -406,6 +426,46 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/polylang/"
+        },
+        {
+            "name": "wpackagist-plugin/speakout",
+            "version": "1.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/speakout/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/speakout.zip?timestamp=1497612005",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/speakout/"
+        },
+        {
+            "name": "wpackagist-plugin/wordfence",
+            "version": "6.3.16",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordfence/",
+                "reference": "tags/6.3.16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.16.zip",
+                "reference": "tags/6.3.16",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordfence/"
         }
     ],
     "packages-dev": [

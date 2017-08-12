@@ -1,4 +1,10 @@
 <?php
+
+if(!defined('GLOB_BRACE')) {
+    define('GLOB_BRACE', 0x10);
+}
+
+
 $root = $_SERVER['DOCUMENT_ROOT'];
 chdir( $root );
 $path = '/'.ltrim( parse_url( $_SERVER['REQUEST_URI'] )['path'],'/' );
