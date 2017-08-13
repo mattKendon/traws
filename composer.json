@@ -40,7 +40,6 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/polylang": "2.1.6",
     "wpackagist-plugin/custom-facebook-feed": "2.4.6",
-    "wpackagist-plugin/wordfence": "6.3.16",
     "wpackagist-plugin/speakout": "1.4.2",
     "johnpbloch/wordpress": "4.8.1"
   },
