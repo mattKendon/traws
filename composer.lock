@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d83b1edfcc19a9895654b76f413e1cf",
+    "content-hash": "e879accb14cd524d6ec46cdfda124ecf",
     "packages": [
         {
             "name": "composer/installers",
@@ -408,6 +408,26 @@
             "homepage": "https://wordpress.org/plugins/custom-facebook-feed/"
         },
         {
+            "name": "wpackagist-plugin/maintenance",
+            "version": "3.5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/maintenance/",
+                "reference": "tags/3.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/maintenance.3.5.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/maintenance/"
+        },
+        {
             "name": "wpackagist-plugin/polylang",
             "version": "2.1.6",
             "source": {
@@ -438,7 +458,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/simple-page-ordering.2.2.4.zip",
-                "reference": null,
+                "reference": "tags/2.2.4",
                 "shasum": null
             },
             "require": {
