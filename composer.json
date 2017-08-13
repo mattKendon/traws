@@ -47,7 +47,9 @@
     "wpackagist-plugin/maintenance": "3.5.1",
     "wpackagist-plugin/wordpress-seo": "5.2",
     "wpackagist-plugin/w3-total-cache": "0.9.5.4",
-    "wpackagist-plugin/login-lockdown": "1.7.1"
+    "wpackagist-plugin/login-lockdown": "1.7.1",
+    "wpackagist-plugin/tablepress": "1.8",
+    "wpackagist-plugin/charts-for-tablepress-chartist": "0.9"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
