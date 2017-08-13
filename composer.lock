@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f271771395ec3586aed2f40465e5201",
+    "content-hash": "ce789330e3f075179c97f94e4ca6f525",
     "packages": [
         {
             "name": "composer/installers",
@@ -446,6 +446,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/speakout/"
+        },
+        {
+            "name": "wpackagist-plugin/wordfence",
+            "version": "6.3.16",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordfence/",
+                "reference": "tags/6.3.16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.16.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordfence/"
         }
     ],
     "packages-dev": [
