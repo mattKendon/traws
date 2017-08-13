@@ -21,3 +21,4 @@ vendor/*
 /vendor/
 !/web/app/plugins/speakout/
 /web/app/wflogs/
+/web/app/cache/
