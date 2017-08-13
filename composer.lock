@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "08a6a724a324fe87f3a792ceb2a1b67e",
+    "content-hash": "2e1d826a01762170968846df4fdf429b",
     "packages": [
         {
             "name": "composer/installers",
@@ -408,6 +408,26 @@
             "homepage": "https://wordpress.org/plugins/custom-facebook-feed/"
         },
         {
+            "name": "wpackagist-plugin/login-lockdown",
+            "version": "v1.7.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/login-lockdown/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/login-lockdown.zip?timestamp=1473805989",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/login-lockdown/"
+        },
+        {
             "name": "wpackagist-plugin/maintenance",
             "version": "3.5.1",
             "source": {
@@ -488,6 +508,26 @@
             "homepage": "https://wordpress.org/plugins/speakout/"
         },
         {
+            "name": "wpackagist-plugin/w3-total-cache",
+            "version": "0.9.5.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/w3-total-cache/",
+                "reference": "tags/0.9.5.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/w3-total-cache.0.9.5.4.zip",
+                "reference": "tags/0.9.5.4",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/w3-total-cache/"
+        },
+        {
             "name": "wpackagist-plugin/wordfence",
             "version": "6.3.16",
             "source": {
@@ -518,7 +558,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.2.zip",
-                "reference": null,
+                "reference": "tags/5.2",
                 "shasum": null
             },
             "require": {
