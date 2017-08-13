@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce789330e3f075179c97f94e4ca6f525",
+    "content-hash": "2d83b1edfcc19a9895654b76f413e1cf",
     "packages": [
         {
             "name": "composer/installers",
@@ -428,6 +428,26 @@
             "homepage": "https://wordpress.org/plugins/polylang/"
         },
         {
+            "name": "wpackagist-plugin/simple-page-ordering",
+            "version": "2.2.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-page-ordering/",
+                "reference": "tags/2.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-page-ordering.2.2.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-page-ordering/"
+        },
+        {
             "name": "wpackagist-plugin/speakout",
             "version": "1.4.2",
             "source": {
@@ -458,7 +478,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordfence.6.3.16.zip",
-                "reference": null,
+                "reference": "tags/6.3.16",
                 "shasum": null
             },
             "require": {
